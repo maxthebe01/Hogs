@@ -33,7 +33,7 @@ main, section {
     padding: 10px 20px;
     font-size: 18px;
     font-weight: bold;
-    border-radius: 10px;
+    border-radius: 15px;
     cursor: pointer;
     transition: background 0.3s ease;
 }
