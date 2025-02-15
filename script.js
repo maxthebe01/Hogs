@@ -1,6 +1,10 @@
 let selectedPrice = 0;
 let quantity = 1;
 
+function toggleMenu() {
+    document.getElementById("slide-menu").classList.toggle("open");
+}
+
 // Function to open modal with product details
 function openModal(title, description, image, price) {
     document.getElementById('modal-title').textContent = title;
