@@ -24,13 +24,13 @@ main, section {
 
 .shop-btn {
     position: absolute;
-    bottom: 30px;
+    bottom: 5px;
     left: 50%;
     transform: translateX(-50%);
     background: #ff6600;
     color: white;
     border: none;
-    padding: 12px 24px;
+    padding: 10px 20px;
     font-size: 18px;
     font-weight: bold;
     border-radius: 10px;
