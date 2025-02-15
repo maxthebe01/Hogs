@@ -40,7 +40,7 @@ main, section {
 
 /* Slide Menu */
 .slide-menu {
-    position: absolute;
+    position: fixed;
     top: 0;
     right: -250px; /* Initially hidden */
     width: 250px;
