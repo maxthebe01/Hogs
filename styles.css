@@ -8,7 +8,7 @@ body {
 }
 
 main, section {
-    margin-top: 60px; /* Push content down */
+    margin-top: 20px; /* Push content down */
 }
 
 /* Navbar Styling */
