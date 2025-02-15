@@ -214,17 +214,17 @@ main, section {
 }
 
 .continue-btn {
-    background: #007bff;
+    background: #ff6600;
     color: white;
     border: none;
     padding: 8px 15px;
     cursor: pointer;
-    border-radius: 5px;
+    border-radius: 25px;
     font-size: 14px;
 }
 
 .continue-btn:hover {
-    background: #0056b3;
+    background: #e65c00;
 }
 
 /* Quantity Selector */
