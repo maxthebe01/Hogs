@@ -15,7 +15,7 @@ function openModal(title, description, image, price) {
 // Function to update total price based on quantity
 function updatePrice() {
     document.getElementById('quantity').textContent = quantity;
-    document.getElementById('modal-price').textContent = `$${(selectedPrice * quantity).toFixed(2)}`;
+    document.getElementById('modal-price').textContent = `$R{(selectedPrice * quantity).toFixed(2)}`;
 }
 
 // Function to change quantity
