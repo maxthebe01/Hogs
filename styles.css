@@ -26,8 +26,7 @@ main, section {
 
 /* Logo Styling */
 .logo img {
-    width: 120px;
-    height: auto; /* Adjust based on your logo size */
+    height: 60px; /* Adjust based on your logo size */
 }
 
 /* Menu Button */
