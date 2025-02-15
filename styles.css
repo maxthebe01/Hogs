@@ -11,78 +11,38 @@ main, section {
     margin-top: 20px; /* Push content down */
 }
 
-/* Navbar Styling */
-.navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background: #222;
-    padding: 10px 20px;
-    position: fixed;
-    top: 0;
+.banner {
+    position: relative;
     width: 100%;
-    z-index: 1000;
-}
-
-/* Logo Styling */
-.logo img {
-    height: 20px; /* Adjust based on your logo size */
-}
-
-/* Menu Button */
-.menu-btn {
-    font-size: 28px;
-    background: none;
-    border: none;
-    color: white;
-    cursor: pointer;
-}
-
-/* Slide Menu */
-.slide-menu {
-    position: fixed;
-    top: 0;
-    right: -250px; /* Initially hidden */
-    width: 250px;
-    height: 100vh;
-    background: #333;
-    transition: right 0.3s ease-in-out;
-    padding-top: 60px;
-}
-
-/* Close Button */
-.close-btn {
-    position: absolute;
-    top: 15px;
-    right: 15px;
-    font-size: 28px;
-    background: none;
-    border: none;
-    color: white;
-    cursor: pointer;
-}
-
-/* Menu List */
-.slide-menu ul {
-    list-style: none;
-    padding: 0;
     text-align: center;
 }
 
-.slide-menu ul li {
-    margin: 20px 0;
+.banner-image {
+    width: 100%;
+    height: auto; /* Ensures responsiveness */
 }
 
-.slide-menu ul li a {
+.shop-btn {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #ff6600;
     color: white;
-    text-decoration: none;
+    border: none;
+    padding: 12px 24px;
     font-size: 18px;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease;
 }
 
-/* Show Menu */
-.slide-menu.open {
-    right: 0;
+.shop-btn:hover {
+    background: #e65c00;
 }
+
+
 
 /* Customer Gallery Section */
 .customer-gallery {
@@ -304,6 +264,10 @@ main, section {
 
     .modal-content {
         width: 95%;
+    }
+    .shop-btn {
+        font-size: 16px;
+        padding: 10px 20px;
     }
 }
 
