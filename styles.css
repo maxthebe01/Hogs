@@ -131,7 +131,7 @@ main, section {
     border: none;
     padding: 8px 15px;
     cursor: pointer;
-    border-radius: 5px;
+    border-radius: 30px;
     font-size: 14px;
 }
 
