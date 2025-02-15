@@ -6,7 +6,7 @@ body {
     background-color: #f5f5f5;
     text-align: center;
 }
-"/* Prevent Horizontal Scrolling */
+/* Prevent Horizontal Scrolling */
 html, body {
     width: 100%;
     overflow-x: hidden;
@@ -358,6 +358,18 @@ main, section {
 
 /* Responsive Design */
 @media screen and (max-width: 768px) {
+    .navbar .nav-links {
+        display: none;
+    }
+
+    .navbar .logo {
+        margin: 0 auto;
+    }
+    
+    .menu-btn {
+        display: inline-block;
+    }
+
     .product-container {
         grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
     }
