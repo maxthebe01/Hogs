@@ -7,6 +7,10 @@ body {
     text-align: center;
 }
 
+main, section {
+    margin-top: 60px; /* Push content down */
+}
+
 /* Navbar Styling */
 .navbar {
     display: flex;
