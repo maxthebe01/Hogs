@@ -80,7 +80,7 @@ main, section {
 }
 
 .cart-icon span {
-	background: #262626;
+	background: #f9f9f9;
 	color: var(--accent-color);
 	border-radius: 50px;
 	width: 15px;
