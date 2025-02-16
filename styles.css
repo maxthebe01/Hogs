@@ -205,6 +205,16 @@ main, section {
     margin: 0;
 }
 
+.footer-container {
+    flex-direction: column;
+    align-items: center;
+}
+
+.footer-section {
+    margin-bottom: 30px;
+    text-align: center;
+}
+
 /* Glowing Effect */
 @keyframes glow {
     0% {
@@ -342,16 +352,6 @@ main, section {
         padding: 10px 20px;
     }
 
-    .footer-container {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .footer-section {
-        margin-bottom: 30px;
-        text-align: center;
-    }
-}
 }
 
 @media screen and (max-width: 480px) {
