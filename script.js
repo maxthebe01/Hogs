@@ -33,3 +33,9 @@ function changeQuantity(value) {
 function closeModal() {
     document.getElementById('product-modal').style.display = 'none';
 }
+
+// Function to toggle the cart modal
+function toggleCart() {
+    const cartModal = document.getElementById('cart-modal');
+    cartModal.style.display = (cartModal.style.display === 'flex') ? 'none' : 'flex';
+}
