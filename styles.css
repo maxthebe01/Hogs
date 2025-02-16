@@ -68,7 +68,7 @@ main, section {
 .gallery-container {
     display: flex;
     overflow-x: auto;
-    gap: 15px;
+    gap: 30px;
     scroll-snap-type: x mandatory;
     padding: 20px;
 }
