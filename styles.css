@@ -32,6 +32,81 @@ main, section {
     height: auto; /* Ensures responsiveness */
 }
 
+/* Cart Button */
+.cart-button {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 1000;
+}
+
+.cart-button button {
+    background: #ff6600;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.cart-button button:hover {
+    background: #e65c00;
+}
+
+/* Cart Modal Styling */
+#cart-modal .modal-content {
+    width: 400px;
+    padding: 20px;
+}
+
+#cart-items {
+    margin-bottom: 20px;
+}
+
+.cart-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0;
+    border-bottom: 1px solid #ddd;
+}
+
+.cart-item img {
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+.cart-item .item-details {
+    flex: 1;
+    padding-left: 10px;
+}
+
+.cart-item .item-actions {
+    display: flex;
+    align-items: center;
+}
+
+.cart-item button {
+    background: #007bff;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.cart-item button:hover {
+    background: #0056b3;
+}
+
+.cart-item .item-quantity {
+    font-size: 16px;
+    font-weight: bold;
+    margin: 0 10px;
+}
+
 .shop-btn {
     position: absolute;
     bottom: 5px;
