@@ -298,11 +298,11 @@ main, section {
     }
 
     .gallery-container {
-        gap: 10px;
+        gap: 20px;
     }
 
     .gallery-item {
-        width: 150px;
+        width: 250px;
     }
 
     .modal-content {
