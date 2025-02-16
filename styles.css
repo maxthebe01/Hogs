@@ -52,8 +52,6 @@ main, section {
     background: #e65c00;
 }
 
-
-
 /* Customer Gallery Section */
 .customer-gallery {
     text-align: center;
@@ -145,13 +143,13 @@ main, section {
 }
 
 .animated-text {
-    font-size: 16px;
+    font-size: 14px;
     font-weight: bold;
     font-family: 'Playfair Display', serif;
     font-style: italic;
     color: #ff6600;
     text-transform: uppercase;
-    letter-spacing: 4px;
+    letter-spacing: 3px;
     animation: glow 2s infinite alternate, float 3s ease-in-out infinite;
 }
 
