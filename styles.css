@@ -32,7 +32,22 @@ main, section {
     height: auto; /* Ensures responsiveness */
 }
 
-.fa-cart-shopping {
+.menu--icons {
+	display: flex;
+	align-items: center;
+	gap: 10px;
+
+}
+
+.menu--icons i {
+	padding: 10px;
+	border-radius: 5px;
+	cursor: pointer;
+	background: var(--decent--color);
+
+}
+
+.fa-shopping-bag {
 	background: transparent !important;
 	border: 1px solid var(--primary-color);
 	color: var(--primary-color);
