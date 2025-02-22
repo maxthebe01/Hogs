@@ -1,48 +1,66 @@
-document.addEventListener("DOMContentLoaded", function () {
-    let cart = JSON.parse(localStorage.getItem("cart")) || [];
-    let cartItemsContainer = document.getElementById("cart-items");
-    let cartTotal = document.getElementById("cart-total");
-    let total = 0;
+const userId = 1;  // Temporary user ID, use authentication in production
 
-    function updateCartDisplay() {
-        cartItemsContainer.innerHTML = "";
-        total = 0;
+// Function to add an item to cart
+function addToCart(productName, price, quantity) {
+    fetch("https://thebe02md.pythonanywhere/cart/add", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ user_id: userId, product_name: productName, price: price, quantity: quantity })
+    })
+    .then(response => response.json())
+    .then(data => {
+        if (data.status === "success") {
+            window.location.href = "cart.html";
+        } else {
+            alert("Error adding to cart");
+        }
+    });
+}
 
-        cart.forEach((item, index) => {
+// Function to load cart items
+function loadCart() {
+    fetch(`http://127.0.0.1:5000/cart?user_id=${userId}`)
+    .then(response => response.json())
+    .then(cartItems => {
+        let cartTable = document.getElementById("cart-items");
+        let cartTotal = document.getElementById("cart-total");
+        cartTable.innerHTML = "";
+        let total = 0;
+
+        cartItems.forEach(item => {
             let subtotal = item.price * item.quantity;
             total += subtotal;
 
-            let row = document.createElement("tr");
-            row.innerHTML = `
-                <td>${item.name}</td>
+            let row = `<tr>
+                <td>${item.product_name}</td>
                 <td>R${item.price}</td>
-                <td>
-                    <button onclick="updateQuantity(${index}, -1)">-</button>
-                    ${item.quantity}
-                    <button onclick="updateQuantity(${index}, 1)">+</button>
-                </td>
+                <td>${item.quantity}</td>
                 <td>R${subtotal}</td>
-                <td><button onclick="removeItem(${index})">❌</button></td>
-            `;
-            cartItemsContainer.appendChild(row);
+                <td><button onclick="removeFromCart(${item.id})">❌</button></td>
+            </tr>`;
+            cartTable.innerHTML += row;
         });
 
         cartTotal.innerText = total;
-        localStorage.setItem("cart", JSON.stringify(cart));
-    }
+    });
+}
 
-    window.updateQuantity = function (index, change) {
-        cart[index].quantity += change;
-        if (cart[index].quantity <= 0) {
-            cart.splice(index, 1);
+// Function to remove an item from the cart
+function removeFromCart(cartId) {
+    fetch("http://127.0.0.1:5000/cart/delete", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ cart_id: cartId })
+    })
+    .then(response => response.json())
+    .then(data => {
+        if (data.status === "success") {
+            loadCart();
+        } else {
+            alert("Error removing item");
         }
-        updateCartDisplay();
-    };
+    });
+}
 
-    window.removeItem = function (index) {
-        cart.splice(index, 1);
-        updateCartDisplay();
-    };
-
-    updateCartDisplay();
-});
+// Load cart when page loads
+document.addEventListener("DOMContentLoaded", loadCart);
