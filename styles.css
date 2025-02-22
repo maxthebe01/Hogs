@@ -141,8 +141,19 @@ main, section {
 .cart-button {
     position: fixed;
     top: 20px;
-    right: 20px;
-    z-index: 1000;
+    right: -100px; /* Start hidden off-screen */
+    background: #ff5722;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 50%;
+    transition: right 0.4s ease-in-out; /* Smooth slide-in effect */
+    z-index: 900; /* Keep above content but below navbar */
+    display: none; /* Initially hidden on larger screens */
+}
+
+/* Show cart button when navbar disappears */
+.cart-button.visible {
+    right: 20px; /* Slides in from the right */
 }
 
 .cart-button button {
