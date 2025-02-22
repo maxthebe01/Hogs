@@ -506,20 +506,23 @@ main, section {
 @media screen and (max-width: 768px) {
 	
     .nav-links {
-        display: none;
+        display: flex;
+	top: -100%; /* Start hidden above the screen */
         flex-direction: column;
         background: #333;
         position: absolute;
-        top: 60px;
+        /* top: 60px; */
         right: 0;
         width: 100%;
         padding: 10px;
+	transition: top 0.4s ease-in-out; /* Smooth slide effect */
 	z-index:1000;
     }
 
+    /* When menu is active */
     .nav-links.active {
-        display: flex;
-    }
+	    top: 0; /* Slide down into view */
+	}
 
     .menu-toggle {
         display: block;
