@@ -11,6 +11,24 @@ function redirectToCart() {
     window.location.href = "cart.html"; // Redirects to the cart page
 }
 
+function addToCart(productName, price, quantity) {
+    let cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+    let existingItem = cart.find(item => item.name === productName);
+
+    if (existingItem) {
+        existingItem.quantity += quantity;
+    } else {
+        cart.push({ name: productName, price: price, quantity: quantity });
+    }
+
+    localStorage.setItem("cart", JSON.stringify(cart));
+
+    // Redirect to cart page
+    window.location.href = "cart.html";
+}
+
+
 // Function to open modal with product details
 function openModal(title, description, image, price) {
     document.getElementById('modal-title').textContent = title;
