@@ -99,7 +99,11 @@
             </div>
 
             <p>Total Price: <span id="modal-price"></span></p>
-            <button class="continue-btn">Continue</button>
+            <button class="continue-btn" onclick="addToCart(
+    document.getElementById('modal-title').innerText, 
+    parseFloat(document.getElementById('modal-price').innerText.replace('R', '')), 
+    parseInt(document.getElementById('quantity').innerText)
+)">Continue</button>
         </div>
     </div>
 </main>
