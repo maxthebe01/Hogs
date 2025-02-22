@@ -2,7 +2,7 @@ const userId = 1;  // Temporary user ID, use authentication in production
 
 // Function to add an item to cart
 function addToCart(productName, price, quantity) {
-    fetch("https://thebe02md.pythonanywhere/cart/add", {
+    fetch("//https://thebe01md.pythonanywhere.com/cart/add", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ user_id: userId, product_name: productName, price: price, quantity: quantity })
@@ -19,7 +19,7 @@ function addToCart(productName, price, quantity) {
 
 // Function to load cart items
 function loadCart() {
-    fetch(`http://127.0.0.1:5000/cart?user_id=${userId}`)
+    fetch(`//https://thebe01md.pythonanywhere.com/cart?user_id=${userId}`)
     .then(response => response.json())
     .then(cartItems => {
         let cartTable = document.getElementById("cart-items");
@@ -47,7 +47,7 @@ function loadCart() {
 
 // Function to remove an item from the cart
 function removeFromCart(cartId) {
-    fetch("http://127.0.0.1:5000/cart/delete", {
+    fetch("//https://thebe01md.pythonanywhere.com//delete", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ cart_id: cartId })
