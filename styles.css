@@ -588,6 +588,30 @@ th, td {
     .product-container {
         grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
     }
+	
+    .cart-container {
+        padding: 10px;
+        width: 95%;
+    }
+
+    /* Make the table scrollable on small screens */
+    .cart-container table {
+        display: block;
+        overflow-x: auto;
+        white-space: nowrap;
+    }
+
+    /* Adjust buttons for better touch accessibility */
+    .cart-container button {
+        padding: 8px;
+        font-size: 14px;
+    }
+
+    /* Make summary text larger */
+    .cart-summary {
+        text-align: center;
+        font-size: 1.2em;
+    }
 
     .gallery-item {
         width: 180px;
