@@ -45,7 +45,6 @@ main, section {
 
 /* Navigation Bar Styles */
 .navbar {
-    position: fixed;  /* Fixes the navbar at the top */
     display: flex;
     justify-content: space-between;
     align-items: center;
