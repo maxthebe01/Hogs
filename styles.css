@@ -543,6 +543,10 @@ main, section {
     .menu-btn {
         display: inline-block;
     }
+	
+    .cart-button {
+        display: block;
+    }
 
     .product-container {
         grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
