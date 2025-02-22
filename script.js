@@ -7,6 +7,10 @@ function toggleMenu() {
     document.querySelector(".nav-links").classList.toggle("active");
 }
 
+function redirectToCart() {
+    window.location.href = "cart.html"; // Redirects to the cart page
+}
+
 // Function to open modal with product details
 function openModal(title, description, image, price) {
     document.getElementById('modal-title').textContent = title;
