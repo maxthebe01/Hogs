@@ -1,8 +1,10 @@
 let selectedPrice = 0;
 let quantity = 1;
 
+
+// Toggle Menu for Mobile
 function toggleMenu() {
-    document.getElementById("slide-menu").classList.toggle("open");
+    document.querySelector(".nav-links").classList.toggle("active");
 }
 
 // Function to open modal with product details
