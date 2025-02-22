@@ -515,6 +515,7 @@ main, section {
         right: 0;
         width: 100%;
         padding: 10px;
+	gap: 20px;
 	transition: top 0.4s ease-in-out; /* Smooth slide effect */
 	z-index:1000;
     }
